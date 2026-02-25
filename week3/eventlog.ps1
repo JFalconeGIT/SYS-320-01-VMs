@@ -11,14 +11,11 @@ if($loginouts[$i].EventID -eq 7001) {$event="Logon"}
 if($loginouts[$i].EventID -eq 7002) {$event="Logoff"}
 
 # Creating user property value
-$user = $loginouts[$i].ReplacementStrings[1] 
 
-    try {
-    $objSID = New-Object System.Security.Principal.SecurityIdentifier($sid)
-    $user = $objSID.Translate([System.Security.Principal.NTAccount]).Value
-} catch {
-    $user = $sid
-}
+$objSID = New-Object System.Security.Principal.SecurityIdentifier
+
+$loginouts[$i].ReplacementStrings[1] 
+    
 
 
 # Adding each new line (in the form of a custom object) to our emtpy array
