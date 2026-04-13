@@ -1,0 +1,16 @@
+#!bin/bash
+
+allLogs=""
+file="/var/log/apache2/access.log"
+
+function getAllLogs(){
+allLog=$(cat "$file" | cut -d' ' -f1,4,7 | tr -d "[")
+}
+
+echo "Before function:"
+echo "$allLogs"
+
+getAllLogs
+echo "After function:"
+echo "$allLogs"
+
