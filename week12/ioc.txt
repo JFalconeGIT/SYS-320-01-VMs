@@ -1,0 +1,5 @@
+slqmap
+nikto
+/etc/passwd
+../
+curl
