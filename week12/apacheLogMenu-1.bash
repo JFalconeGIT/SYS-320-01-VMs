@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/bash
 
-logFile="/var/log/apache2/access.log.1"
+logFile="/var/log/apache2/access.log"
 
 function displayAllLogs(){
 	cat "$logFile"
