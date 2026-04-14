@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # This is the link we will scrape
 link="10.0.17.6/Courses.html"
