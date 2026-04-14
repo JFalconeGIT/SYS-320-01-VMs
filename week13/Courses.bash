@@ -12,6 +12,17 @@ xmlstarlet format --html --recover 2>/dev/null | \
 xmlstarlet select --template --copy-of \
 "//html//body//div//div//table//tr")
 
+# Try these alternatives depending on what inspect shows:
+
+# If table is directly in body:
+xmlstarlet select --template --copy-of "//html//body//table//tr"
+
+# If table is one div deep:
+xmlstarlet select --template --copy-of "//html//body//div//table//tr"
+
+# If table has a specific class or id, target it directly:
+xmlstarlet select --template --copy-of "//table//tr"
+
 # Processing HTML with sed
 # 1- Replacing every </tr> with a line break
 echo "$toolOutput" | sed 's/<\/tr>/\n/g' | \
