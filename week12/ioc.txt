@@ -3,3 +3,4 @@ nikto
 /etc/passwd
 ../
 curl
+/bin/bash
