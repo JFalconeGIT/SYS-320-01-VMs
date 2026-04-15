@@ -1,7 +1,7 @@
-#!/bin/bash
+#! /bin/bash
 
 # This is the link we will scrape
-link="10.0.17.6/Courses.html"
+link="10.0.17.6/Courses2026SP.html"
 
 # get it with curl and tell curl not to give errors
 fullPage=$(curl -sL "$link")
@@ -33,9 +33,3 @@ echo "$toolOutput" | sed 's/<\/tr>/\n/g' | \
                      sed -e 's/<[/\]\{0,1\}a[^>]*>//g' | \
                      sed -e 's/<[/\]\{0,1\}nobr>//g' \
 		      > courses.txt
-
-
-
-
-
-

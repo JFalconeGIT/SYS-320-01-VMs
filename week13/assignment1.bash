@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 clear
 
 # filling courses.txt
@@ -89,7 +89,6 @@ function displayAvailableCourses(){
 
 while :
 do
-<<<<<<< HEAD
 	echo ""
 	echo "Please select and option:"
 	echo "[1] Display courses of an instructor"
@@ -97,15 +96,6 @@ do
         echo "[3] Display courses of a classroom"
         echo "[4] Display available courses of a subject"
 	echo "[5] Exit"
-=======
-    echo ""
-    echo "Please select an option:"
-    echo "[1] Display courses of an instructor"
-    echo "[2] Display course count of instructors"
-    echo "[3] Display courses of a location"
-    echo "[4] Display available courses by course code"
-    echo "[5] Exit"
->>>>>>> 74f1c78628da18e323296d5e5e5131b10d5f98ba
 
     read userInput
     echo ""
@@ -120,27 +110,14 @@ do
     elif [[ "$userInput" == "2" ]]; then
         courseCountofInsts
 
-<<<<<<< HEAD
-        elif [[ "$userInput" == "3" ]]; then
+    elif [[ "$userInput" == "3" ]]; then
                 displayCoursesofClassroom
 
-        elif [[ "$userInput" == "4" ]]; then
+    elif [[ "$userInput" == "4" ]]; then
                 displayAvailableCourses
 
-	# TODO - 3 Display a message, if an invalid input is given
-        else
-            echo "Invalid option. Please select one of the displayed items."
-	fi
-=======
-    elif [[ "$userInput" == "3" ]]; then
-        displayCoursesofLocation
-
-    elif [[ "$userInput" == "4" ]]; then
-        displayAvailableCourses
-
-    # TODO - 3
+# TODO - 3 Display a message, if an invalid input is given
     else
-        echo "Invalid option. Please select a valid menu item."
+        echo "Invalid option. Please select one of the displayed items."
     fi
->>>>>>> 74f1c78628da18e323296d5e5e5131b10d5f98ba
 done
