@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Display only the IP address from ip addr
-
-ip addr | grep "inet " | grep -v "127.0.0.1" | grep -oE "([0-9]+\.){3}[0-9]+"
-
